@@ -1,0 +1,95 @@
+package org.project.ecommercebackend.dto.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.project.ecommercebackend.model.Product;
+
+//@Data
+//@NoArgsConstructor
+public class ProductDTO {
+    private Long id;
+    private String name;
+    private String description;
+    private double price;
+    private String imageUrl;
+    private int stock;
+    public ProductDTO() {
+    }
+
+    public ProductDTO(Long id, String name, String description, double price, String imageUrl, int stock) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.imageUrl = imageUrl;
+        this.stock = stock;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
+    public ProductDTO updateProduct(ProductDTO newProductDTO) {
+        if(newProductDTO.getName() != null) {
+            this.setName(newProductDTO.getName());
+        }
+        if(newProductDTO.getDescription() != null) {
+            this.setDescription(newProductDTO.getDescription());
+        }
+        if(newProductDTO.getPrice() != 0) {
+            this.setPrice(newProductDTO.getPrice());
+        }
+        if(newProductDTO.getImageUrl() != null) {
+            this.setImageUrl(newProductDTO.getImageUrl());
+        }
+        if(newProductDTO.getStock() != 0) {
+            this.setStock(newProductDTO.getStock());
+        }
+        return this;
+    }
+}
