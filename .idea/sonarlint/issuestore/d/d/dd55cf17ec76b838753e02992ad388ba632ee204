@@ -1,0 +1,17 @@
+
+m	java:S1064"+Replace this use of System.out by a logger.(‚Åòñ8±—åÿä1J$625be6b4-69be-4d97-88f1-c8fb6b9b8ec3
+m	java:S1066"+Replace this use of System.out by a logger.(è·Ù­8²—åÿä1J$fe4c557a-a5b6-48d5-a281-eb22aaf26cb0
+ƒ	java:S1258"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8«Ôüÿä1J$d034ed5d-49aa-40dd-a594-8cc51c599139
+r	java:S106A"+Replace this use of System.out by a logger.(Ø½û³þÿÿÿÿ8³—åÿä1J$59f60b74-cf97-4ea8-8ad7-18c81943f6c5
+ƒ	java:S125="<This block of commented-out lines of code should be removed.(ÐÛêüýÿÿÿÿ8¬Ôüÿä1J$20a884fc-0bde-4a3b-bef8-9d23b47c5e14
+ƒ	java:S125C"<This block of commented-out lines of code should be removed.(ÆÇ²Ëúÿÿÿÿ8µ—åÿä1J$080b55f8-7e46-44dc-8393-af7e4ff44d2c
+m	java:S106G"+Replace this use of System.out by a logger.(·ÿÒ‚8¸—åÿä1J$e5af6569-f7fa-4488-96e2-03e03ffde44f
+r	java:S106J"+Replace this use of System.out by a logger.(ß¼¾ÿÿÿÿÿ8¸—åÿä1J$09755afc-decb-4fb5-8c6b-6051a7aec4ce
+‡
+java:S1128"DRemove this unused import 'org.project.ecommercebackend.model.User'.(ßýÈÔ8¹—åÿä1J$0d3164ba-34d9-4d96-ace9-4fbc40a9a2c1
+™
+java:S1128"VRemove this unused import 'org.springframework.security.core.AuthenticationException'.(¤ò›¿8°Ôüÿä1J$2526a95e-f600-4a80-b645-c42eec196a41
+Ÿ
+java:S1128"\Remove this unused import 'org.springframework.security.core.context.SecurityContextHolder'.(ŒÄæë8º—åÿä1J$44503893-4a2b-49ec-bf7f-5e01a596fc30
+™
+java:S1128"VRemove this unused import 'org.springframework.security.core.userdetails.UserDetails'.(ÊÁ¥8º—åÿä1J$e7ca54b3-23f0-4d0e-8eb4-432e9fb45d79
