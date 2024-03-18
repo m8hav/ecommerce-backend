@@ -59,7 +59,7 @@ public class SecurityConfig {
 //                    CorsConfiguration cfg = new CorsConfiguration();
 //                    cfg.setAllowedOrigins(Arrays.asList("http://localhost:5173"));
 //                    cfg.setAllowCredentials(true);
-//                    cfg.setAllowedMethods(List.of("GET","POST","DELETE"));
+//                    cfg.setAllowedMethods(List.of("GET", "POST", "DELETE", "PUT"));
 //                    cfg.setAllowedHeaders(Collections.singletonList("*"));
 //                    cfg.setExposedHeaders(Arrays.asList("Authorization"));
 //                    cfg.setMaxAge(3600L);
@@ -83,6 +83,7 @@ public class SecurityConfig {
                         .hasAnyAuthority(UserRole.ADMIN.name())
                         .requestMatchers(
                                 HttpMethod.POST,
+                                "/v1/products",
                                 "/v1/products/**"
                         )
                         .hasAnyAuthority(UserRole.ADMIN.name())

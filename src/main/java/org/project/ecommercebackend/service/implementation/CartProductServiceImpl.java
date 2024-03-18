@@ -14,12 +14,9 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-//@RequiredArgsConstructor
 public class CartProductServiceImpl implements CartProductService {
-//    @Autowired
     private final CartProductRepository cartProductRepository;
     private final CartRepository cartRepository;
-//    @Autowired
     private final ProductService productService;
 
     @Autowired

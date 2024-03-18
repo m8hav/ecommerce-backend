@@ -19,8 +19,6 @@ public interface UserService {
 
     Optional<UserDTO> getUserById(Long id);
 
-//    Optional<UserDTO> getUser();
-
     UserDTO getUserSafe();
 
     User getUserEntity();
@@ -28,6 +26,8 @@ public interface UserService {
     Optional<UserDTO> getUserByEmail(String email);
 
     Optional<UserDTO> updateUser(UserDTO userDTO);
+
+    Optional<UserDTO> updateUserPassword(String password);
 
     boolean deleteUser(Long id);
 

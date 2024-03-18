@@ -3,11 +3,11 @@ package org.project.ecommercebackend.service.implementation;
 import org.project.ecommercebackend.dto.model.CartDTO;
 import org.project.ecommercebackend.dto.model.CartProductDTO;
 import org.project.ecommercebackend.dto.model.ProductDTO;
-import org.project.ecommercebackend.model.User;
 import org.project.ecommercebackend.mapper.CartMapper;
 import org.project.ecommercebackend.mapper.CartProductMapper;
 import org.project.ecommercebackend.model.Cart;
 import org.project.ecommercebackend.model.CartProduct;
+import org.project.ecommercebackend.model.User;
 import org.project.ecommercebackend.repository.CartRepository;
 import org.project.ecommercebackend.service.service.CartProductService;
 import org.project.ecommercebackend.service.service.CartService;
@@ -21,7 +21,6 @@ import java.util.Optional;
 import java.util.Set;
 
 @Service
-//@RequiredArgsConstructor
 public class CartServiceImpl implements CartService {
     private final CartRepository cartRepository;
     private final ProductService productService;

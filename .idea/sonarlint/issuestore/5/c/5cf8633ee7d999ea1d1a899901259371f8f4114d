@@ -1,8 +1,12 @@
 
+
+java:S2259q"EA "NullPointerException" could be thrown; "userDTO" is nullable here.(İ£ ïúÿÿÿÿ8Å¿ÃŠå1J$224fb959-90d1-4a3a-bce6-da9692e364cf
+‰
+java:S2259ƒ"EA "NullPointerException" could be thrown; "orElse()" can return null.(¯†ŒŠ8Å¿ÃŠå1J$dd8bb2f9-48bd-4001-9e76-37ae049efcef
+
+java:S2259`"H"NullPointerException" will be thrown when invoking method "safeUser()".(—–ü®ÿÿÿÿÿ8ÖøÅŠå1J$36c57220-0a1f-492f-9dc8-8e39874d1b4d
 •
-java:S2259`"MA "NullPointerException" could be thrown; "existingUserDTO" is nullable here.(Ùíı²ùÿÿÿÿ8×Üøôä1J$95a1c3eb-484d-4632-926f-69a8890fe205
-ˆ
-java:S2259r"EA "NullPointerException" could be thrown; "orElse()" can return null.(¯†ŒŠ8æË¹€å1J$75eb889a-f4e1-45e4-8666-21d041aa4490
-ƒ	java:S125C"<This block of commented-out lines of code should be removed.(Œ÷·úÿÿÿÿ8àÜøôä1J$c46c0841-6c34-401b-82ad-e44fd8e46e21
-r	java:S106p"+Replace this use of System.out by a logger.(€äÓ«ûÿÿÿÿ8ò”¹€å1J$88345e64-b2bc-486d-8a2f-a62c91d9d157
-r	java:S106q"+Replace this use of System.out by a logger.(—…óæıÿÿÿÿ8ùË¹€å1J$bc80511f-d8c7-433d-ab15-5910bd523e62
+java:S2259f"MA "NullPointerException" could be thrown; "existingUserDTO" is nullable here.(Ùíı²ùÿÿÿÿ8Æ¿ÃŠå1J$b8ba4bcb-b302-43d0-a43b-41c6d1c6108c
+]	java:S125b"<This block of commented-out lines of code should be removed.(á¯®¬úÿÿÿÿ8ÙåúŒå1
+s	java:S106"+Replace this use of System.out by a logger.(€äÓ«ûÿÿÿÿ8Ú¿ÃŠå1J$da75b452-89b2-4965-8070-391f29ba1034
+s	java:S106‚"+Replace this use of System.out by a logger.(—…óæıÿÿÿÿ8Û¿ÃŠå1J$0ca09e74-7289-4f65-a62f-cfe5dcaf056b

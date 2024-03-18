@@ -1,17 +1,5 @@
 
 —
-java:S1192K"ODefine a constant instead of duplicating this literal "/v1/product/**" 3 times.(ÌÚşºÿÿÿÿÿ8¯åÿùä1J$b4a84c51-648b-42ab-87dd-705b76729713
-}	java:S125"<This block of commented-out lines of code should be removed.(ûŠ†8¿åÿùä1J$ec44d321-5662-46ff-98ae-72fac851580f
-ƒ	java:S125:"<This block of commented-out lines of code should be removed.(ÉÏØúıÿÿÿÿ8‹ºÚıä1J$f6ed2846-1ffd-4b1a-a144-1fc0d83d2aa4
-†
-java:S1128"DRemove this unused import 'jakarta.servlet.http.HttpServletRequest'.(õ38Íåÿùä1J$32c9bca8-5922-4154-8c4e-58c2618f1001
-
-java:S1128"KRemove this unused import 'org.springframework.web.cors.CorsConfiguration'.(î¤·`8–ºÚıä1J$6860df40-69b8-46e5-985c-b6967787aa44
-™
-java:S1128"QRemove this unused import 'org.springframework.web.cors.CorsConfigurationSource'.(ŒºÏøşÿÿÿÿ8Íåÿùä1J$4768aa19-1cf6-4fe6-8d8b-4b6e3f5cf9fa
-u
-java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8—ºÚıä1J$6a24dbd6-991a-4e69-9d40-398d390a8d16
-z
-java:S1128"2Remove this unused import 'java.util.Collections'.(¢³ïÓşÿÿÿÿ8—ºÚıä1J$ddbafad3-8e74-405c-bf34-678bd08e0570
-s
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8—ºÚıä1J$2b12dac0-96a6-49e1-82de-ca25ec720f73
+java:S1192K"ODefine a constant instead of duplicating this literal "/v1/product/**" 3 times.(ÌÚşºÿÿÿÿÿ8¯åÿùä1J$b353b877-1e21-493d-825a-5913e836a2e4
+}	java:S125"<This block of commented-out lines of code should be removed.(ûŠ†8¿åÿùä1J$52c75e56-25fb-46c9-bc57-e6e4ab987d6e
+ƒ	java:S125:"<This block of commented-out lines of code should be removed.(ÉÏØúıÿÿÿÿ8†©ø…å1J$398db90c-92e8-42fc-a8ef-4b2eaf319f09

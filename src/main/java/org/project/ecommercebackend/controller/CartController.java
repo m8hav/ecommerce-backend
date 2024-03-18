@@ -57,7 +57,7 @@ public class CartController {
 
     @PutMapping
     public CartDTO updateProductQuantityInCart(@RequestBody CartRequestDTO cartRequestDTO) {
-        if (cartRequestDTO == null || cartRequestDTO.getProductId() == null || cartRequestDTO.getQuantity() == 0) {
+        if (cartRequestDTO == null || cartRequestDTO.getProductId() == null) {
             throw new IllegalArgumentException("Product id and quantity are required");
         }
         return cartService.updateProductQuantityInCart(cartRequestDTO.getProductId(), cartRequestDTO.getQuantity())

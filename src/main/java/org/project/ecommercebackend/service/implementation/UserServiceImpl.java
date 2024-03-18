@@ -6,10 +6,12 @@ import org.project.ecommercebackend.model.User;
 import org.project.ecommercebackend.repository.UserRepository;
 import org.project.ecommercebackend.service.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,11 +20,12 @@ import java.util.Optional;
 @Service
 public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
-//    private final AuthService
+    private final PasswordEncoder passwordEncoder;
 
     @Autowired
-    public UserServiceImpl(UserRepository userRepository) {
+    public UserServiceImpl(UserRepository userRepository, @Lazy PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
     }
 
     @Override
@@ -34,7 +37,6 @@ public class UserServiceImpl implements UserService {
         return userDTO == null
                 || userDTO.getName() == null
                 || userDTO.getEmail() == null
-                || userDTO.getPassword() == null
                 || userDTO.getRole() == null;
     }
 
@@ -63,17 +65,18 @@ public class UserServiceImpl implements UserService {
         return user.map(UserMapper.INSTANCE::toUserDTO);
     }
 
-//    @Override
-//    private Optional<UserDTO> getUser() {
-//        return getUserByEmail(getAuthenticatedUserEmail());
-//    }
-
     @Override
     public UserDTO getUserSafe() {
         User user = getUserEntity();
         user.setId(null);
         user.setPassword(null);
         return UserMapper.INSTANCE.toUserDTO(user);
+    }
+
+    private UserDTO safeUser(UserDTO userDTO) {
+        userDTO.setId(null);
+        userDTO.setPassword(null);
+        return userDTO;
     }
 
     @Override
@@ -89,12 +92,26 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Optional<UserDTO> updateUser(UserDTO userDTO) {
-        if (isUserInvalid(userDTO)) {
-            throw new IllegalArgumentException("All user fields must be provided");
+        if (userDTO.getPassword() != null) {
+            return Optional.of(safeUser(updateUserPassword(userDTO.getPassword()).orElse(null)));
         }
+//        if (isUserInvalid(userDTO)) {
+//            throw new IllegalArgumentException("All user fields (except password) must be provided");
+//        }
         UserDTO existingUserDTO = getUserByEmail(getAuthenticatedUserEmail()).orElse(null);
         existingUserDTO.update(userDTO);
         User updatedUser = userRepository.save(UserMapper.INSTANCE.toUser(existingUserDTO));
+        return Optional.ofNullable(UserMapper.INSTANCE.toUserDTO(updatedUser));
+    }
+
+    @Override
+    public Optional<UserDTO> updateUserPassword(String password) {
+        if (password == null) {
+            throw new IllegalArgumentException("Password must be provided");
+        }
+        UserDTO userDTO = getUserByEmail(getAuthenticatedUserEmail()).orElse(null);
+        userDTO.setPassword(passwordEncoder.encode(password));
+        User updatedUser = userRepository.save(UserMapper.INSTANCE.toUser(userDTO));
         return Optional.ofNullable(UserMapper.INSTANCE.toUserDTO(updatedUser));
     }
 

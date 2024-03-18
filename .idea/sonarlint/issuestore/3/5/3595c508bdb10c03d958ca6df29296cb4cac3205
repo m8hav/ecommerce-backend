@@ -1,9 +1,9 @@
 
-J
-java:S1128"(Remove this unused import 'lombok.Data'.(÷í«ÿÿÿÿÿ8ƒ†Á³ä1
-R
-java:S1128"5Remove this unused import 'lombok.NoArgsConstructor'.(¸¨›8„†Á³ä1
-i
-java:S1128"LRemove this unused import 'org.project.ecommercebackend.model.OrderProduct'.(ß“äÓ8„†Á³ä1
-M
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8„†Á³ä1
+p
+java:S1128"(Remove this unused import 'lombok.Data'.(÷í«ÿÿÿÿÿ8ƒ†Á³ä1J$906ce916-607f-4f25-a86d-5043e90cca95
+x
+java:S1128"5Remove this unused import 'lombok.NoArgsConstructor'.(¸¨›8„†Á³ä1J$92e9284a-382a-4019-adb6-082e1ee1fe37
+
+java:S1128"LRemove this unused import 'org.project.ecommercebackend.model.OrderProduct'.(ß“äÓ8„†Á³ä1J$ac88eb55-2cfe-43f3-b856-73963a04d0da
+s
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8„†Á³ä1J$4842f364-8f0b-4b73-b52e-cb20b60a775e

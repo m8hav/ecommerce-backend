@@ -6,6 +6,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.project.ecommercebackend.service.service.JWTService;
 import org.project.ecommercebackend.service.service.UserService;
+import org.springframework.security.authentication.AuthenticationCredentialsNotFoundException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -15,6 +16,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
+
+import static org.hibernate.sql.ast.SqlTreeCreationLogger.LOGGER;
 
 @Component
 public class JWTAuthFilter extends OncePerRequestFilter {
@@ -35,11 +38,19 @@ public class JWTAuthFilter extends OncePerRequestFilter {
         final String jwt;
         final String userEmail;
 
+        System.out.println("authHeader: " + authHeader);
+
         if(authHeader == null || !authHeader.startsWith("Bearer")){
             System.out.println("Reached doFilterInternal in JWTAuthFilter after header check success");
             filterChain.doFilter(request,response);
             return;
         }
+//        if (authHeader == null || !authHeader.startsWith("Bearer ")) {
+//            System.err.println("Header: " + authHeader);
+////            LOGGER.error("JWT Token is either missing from HTTP header or has been provided in an incorrect format!");
+//            throw new AuthenticationCredentialsNotFoundException(
+//                    "JWT Token is either missing from HTTP header or has been provided in an incorrect format!");
+//        }
 
         System.out.println("Reached doFilterInternal in JWTAuthFilter after header check failed");
 

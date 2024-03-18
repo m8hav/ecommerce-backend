@@ -1,15 +1,15 @@
 
-	java:S112r"FDefine and throw a dedicated exception instead of using a generic one.(±îÃüÿÿÿÿ8„½½ôä1J$419035af-df72-4339-b13c-6084fdd5d12a
-	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(±îÃüÿÿÿÿ8…½½ôä1J$bab97ba6-bc01-47b9-882f-08ba503e249d
+	java:S112r"FDefine and throw a dedicated exception instead of using a generic one.(±îÃüÿÿÿÿ8„½½ôä1J$39826215-a878-4465-a316-1d7cc7bb0142
+	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(±îÃüÿÿÿÿ8…½½ôä1J$a29ef09a-cfc6-45b1-ac06-8f409d496237
 £
-java:S1192ã"_Define a constant instead of duplicating this literal "Product does not exist in cart" 4 times.(Ô¼’Ó8‡½½ôä1J$9db7412b-89bc-4669-bfca-c88ef9829140
+java:S1192ã"_Define a constant instead of duplicating this literal "Product does not exist in cart" 4 times.(Ô¼’Ó8‡½½ôä1J$ef37aa04-f48a-4ba7-af05-260d48b98759
  
-java:S1192"WDefine a constant instead of duplicating this literal "Product does not exist" 4 times.(­Íõİüÿÿÿÿ8‡½½ôä1J$917d03f9-cbc8-4d80-9ac2-0477771fed36
+java:S1192"WDefine a constant instead of duplicating this literal "Product does not exist" 4 times.(­Íõİüÿÿÿÿ8‡½½ôä1J$07ee6838-353c-4e7f-8586-71173094b967
 ª
-java:S1192J"bDefine a constant instead of duplicating this literal "Cart for this user does not exist" 5 times.(¦ç¬Éøÿÿÿÿ8‡½½ôä1J$88ae1f9b-31f8-4192-b546-a1c40fd968b2
+java:S1192J"bDefine a constant instead of duplicating this literal "Cart for this user does not exist" 5 times.(¦ç¬Éøÿÿÿÿ8‡½½ôä1J$ce0188e3-4c40-49a0-8424-00e44f1e5a92
 †
-java:S2259÷"BA "NullPointerException" could be thrown; "cart" is nullable here.(·ãÑ×8Ñ½½ôä1J$759aec20-9eeb-455d-8328-c4e446368142
+java:S2259×"BA "NullPointerException" could be thrown; "cart" is nullable here.(·ãÑ×8Ò½½ôä1J$ead75677-2132-4bbb-8e57-0f27ca687d75
 †
-java:S2259×"BA "NullPointerException" could be thrown; "cart" is nullable here.(·ãÑ×8Ò½½ôä1J$e7857d94-fad5-4e04-a530-807968263405
-s	java:S106À"+Replace this use of System.out by a logger.(»ÿ‘‹şÿÿÿÿ8ì½½ôä1J$3bec27db-21b6-4777-bcd4-afd96717c258
-s	java:S106Ğ"+Replace this use of System.out by a logger.(»ÿ‘‹şÿÿÿÿ8î½½ôä1J$1e56bde0-24ba-4266-9955-15dcc7b8c0a1
+java:S2259÷"BA "NullPointerException" could be thrown; "cart" is nullable here.(·ãÑ×8Ñ½½ôä1J$ee0a8f3d-8b5a-4638-a3aa-27bc17eef787
+s	java:S106À"+Replace this use of System.out by a logger.(»ÿ‘‹şÿÿÿÿ8î½½ôä1J$d340ea43-f2fc-4612-a7f8-cbe8087cd023
+M	java:S106Ğ"+Replace this use of System.out by a logger.(»ÿ‘‹şÿÿÿÿ8ê‹‚Œå1

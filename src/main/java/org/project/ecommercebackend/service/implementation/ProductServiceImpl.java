@@ -65,6 +65,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Optional<ProductDTO> updateProduct(ProductDTO productDTO) {
+        System.out.println("productDTO received " + productDTO.getName() + ", " + productDTO.getStock());
         Product existingProduct = productRepository.findById(productDTO.getId()).orElse(null);
         if(existingProduct == null) {
             throw new IllegalArgumentException("Product with this id does not exist");

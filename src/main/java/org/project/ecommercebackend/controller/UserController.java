@@ -26,10 +26,6 @@ public class UserController {
         return userService.getUsers();
     }
 
-//    @GetMapping("/user/{id}")
-//    public UserDTO getUserById(@PathVariable Long id) {
-//        return userService.getUserById(id).orElseThrow(() -> new IllegalArgumentException("User not found"));
-//    }
     @GetMapping("/user")
     public UserDTO getUser() {
         return userService.getUserSafe();
@@ -40,10 +36,6 @@ public class UserController {
         return userService.updateUser(userDTO).orElseThrow(() -> new MissingFormatArgumentException("User not updated"));
     }
 
-//    @DeleteMapping("/user/{id}")
-//    public boolean deleteUser(@PathVariable Long id) {
-//        return userService.deleteUser(id);
-//    }
     @DeleteMapping("/user")
     public boolean deleteUser() {
         return userService.deleteUser();
