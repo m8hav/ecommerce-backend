@@ -1,11 +1,15 @@
 
-	java:S112g"FDefine and throw a dedicated exception instead of using a generic one.(±îÃüÿÿÿÿ8¡˜™Áä1J$2467cf0a-93ff-445d-8bd0-fd90a6e1c712
+	java:S112r"FDefine and throw a dedicated exception instead of using a generic one.(±îÃüÿÿÿÿ8„½½ôä1J$419035af-df72-4339-b13c-6084fdd5d12a
+Ž	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(±îÃüÿÿÿÿ8…½½ôä1J$bab97ba6-bc01-47b9-882f-08ba503e249d
+£
+java:S1192ã"_Define a constant instead of duplicating this literal "Product does not exist in cart" 4 times.(Ô¼’Ó8‡½½ôä1J$9db7412b-89bc-4669-bfca-c88ef9829140
+ 
+java:S1192"WDefine a constant instead of duplicating this literal "Product does not exist" 4 times.(­ÍõÝüÿÿÿÿ8‡½½ôä1J$917d03f9-cbc8-4d80-9ac2-0477771fed36
 ª
-java:S1192L"bDefine a constant instead of duplicating this literal "Cart for this user does not exist" 3 times.(¦ç¬Éøÿÿÿÿ8£˜™Áä1J$1022efcc-5d01-4965-bef9-b79a6fddb652
+java:S1192J"bDefine a constant instead of duplicating this literal "Cart for this user does not exist" 5 times.(¦ç¬Éøÿÿÿÿ8‡½½ôä1J$88ae1f9b-31f8-4192-b546-a1c40fd968b2
 †
-java:S2259œ"BA "NullPointerException" could be thrown; "cart" is nullable here.(·ãÑ×8Ô˜™Áä1J$66a8201e-e63c-4cc9-9a2b-9442a8de5886
-ƒ	java:S125>"<This block of commented-out lines of code should be removed.(•ßáïüÿÿÿÿ8Ú˜™Áä1J$b616bfc7-2302-4775-b124-f4cb43177657
-	java:S125Ê"<This block of commented-out lines of code should be removed.(Ä«²¾8æ˜™Áä1J$223ea1fe-1813-418d-b6c8-dec6bd5047ba
-s	java:S106Ï"+Replace this use of System.out by a logger.(»ÿ‘‹þÿÿÿÿ8ç˜™Áä1J$f4d6739c-a766-415e-9799-a43441911943
-s
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8é˜™Áä1J$ee466ba3-b89f-4204-b320-dd0563b5a6b6
+java:S2259÷"BA "NullPointerException" could be thrown; "cart" is nullable here.(·ãÑ×8Ñ½½ôä1J$759aec20-9eeb-455d-8328-c4e446368142
+†
+java:S2259×"BA "NullPointerException" could be thrown; "cart" is nullable here.(·ãÑ×8Ò½½ôä1J$e7857d94-fad5-4e04-a530-807968263405
+s	java:S106À"+Replace this use of System.out by a logger.(»ÿ‘‹þÿÿÿÿ8ì½½ôä1J$3bec27db-21b6-4777-bcd4-afd96717c258
+s	java:S106Ð"+Replace this use of System.out by a logger.(»ÿ‘‹þÿÿÿÿ8î½½ôä1J$1e56bde0-24ba-4266-9955-15dcc7b8c0a1

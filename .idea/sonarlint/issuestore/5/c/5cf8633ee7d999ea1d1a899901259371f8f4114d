@@ -1,3 +1,8 @@
 
-…
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ8­¿Ë·ä1J$49a0ac2c-f096-4afc-8844-93f6fe93e6e3
+•
+java:S2259`"MA "NullPointerException" could be thrown; "existingUserDTO" is nullable here.(Ùíý²ùÿÿÿÿ8×Üøôä1J$95a1c3eb-484d-4632-926f-69a8890fe205
+ˆ
+java:S2259r"EA "NullPointerException" could be thrown; "orElse()" can return null.(¯†ŒŠ8æË¹€å1J$75eb889a-f4e1-45e4-8666-21d041aa4490
+ƒ	java:S125C"<This block of commented-out lines of code should be removed.(Œ÷·úÿÿÿÿ8àÜøôä1J$c46c0841-6c34-401b-82ad-e44fd8e46e21
+r	java:S106p"+Replace this use of System.out by a logger.(€äÓ«ûÿÿÿÿ8ò”¹€å1J$88345e64-b2bc-486d-8a2f-a62c91d9d157
+r	java:S106q"+Replace this use of System.out by a logger.(—…óæýÿÿÿÿ8ùË¹€å1J$bc80511f-d8c7-433d-ab15-5910bd523e62

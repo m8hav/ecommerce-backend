@@ -3,6 +3,7 @@ org/project/ecommercebackend/dto/model/CartProductDTO.class
 org/project/ecommercebackend/mapper/OrderProductMapper.class
 org/project/ecommercebackend/controller/ProductController.class
 org/project/ecommercebackend/dto/request/CartRequestDTO.class
+org/project/ecommercebackend/authFilter/JWTAuthFilter.class
 org/project/ecommercebackend/mapper/UserMapper.class
 org/project/ecommercebackend/mapper/CartProductMapper.class
 org/project/ecommercebackend/mapper/ProductMapperImpl.class
@@ -20,6 +21,7 @@ org/project/ecommercebackend/model/User.class
 org/project/ecommercebackend/repository/ProductRepository.class
 org/project/ecommercebackend/mapper/OrderProductMapperImpl.class
 org/project/ecommercebackend/service/service/ProductService.class
+org/project/ecommercebackend/controller/AuthController.class
 org/project/ecommercebackend/service/service/OrderService.class
 org/project/ecommercebackend/dto/model/ProductDTO.class
 org/project/ecommercebackend/mapper/CartMapper.class
@@ -35,13 +37,19 @@ org/project/ecommercebackend/EcommerceBackendApplication.class
 org/project/ecommercebackend/service/implementation/OrderProductServiceImpl.class
 org/project/ecommercebackend/dto/model/UserDTO.class
 org/project/ecommercebackend/service/service/UserService.class
+org/project/ecommercebackend/constant/UserRole.class
 org/project/ecommercebackend/model/Order.class
+org/project/ecommercebackend/service/implementation/JWTServiceImpl.class
 org/project/ecommercebackend/dto/model/OrderDTO.class
 org/project/ecommercebackend/model/Cart.class
 org/project/ecommercebackend/mapper/ProductMapper.class
+org/project/ecommercebackend/service/implementation/AuthServiceImpl.class
 org/project/ecommercebackend/mapper/CartMapperImpl.class
+org/project/ecommercebackend/service/service/AuthService.class
 org/project/ecommercebackend/service/implementation/CartServiceImpl.class
+org/project/ecommercebackend/dto/request/SigninResponseDTO.class
 org/project/ecommercebackend/service/implementation/CartProductServiceImpl.class
+org/project/ecommercebackend/service/service/JWTService.class
 org/project/ecommercebackend/mapper/OrderMapperImpl.class
 org/project/ecommercebackend/service/service/CartProductService.class
 org/project/ecommercebackend/repository/OrderProductRepository.class

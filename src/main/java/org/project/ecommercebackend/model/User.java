@@ -4,13 +4,20 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.project.ecommercebackend.constant.UserRole;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.Collection;
+import java.util.List;
 
 //@Data
 //@AllArgsConstructor
 //@NoArgsConstructor
 @Entity
 @Table(name = "users")
-public class User {
+public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -25,17 +32,17 @@ public class User {
     private String password;
 
     @Column(nullable = false)
-    private Boolean admin;
+    private UserRole role;
 
     public User() {
     }
 
-    public User(Long id, String name, String email, String password, Boolean admin) {
+    public User(Long id, String name, String email, String password, UserRole role) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
-        this.admin = admin;
+        this.role = role;
     }
 
     public Long getId() {
@@ -62,19 +69,49 @@ public class User {
         this.email = email;
     }
 
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return List.of(new SimpleGrantedAuthority(role.name()));
+    }
+
     public String getPassword() {
         return password;
+    }
+
+    @Override
+    public String getUsername() {
+        return email;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
     }
 
     public void setPassword(String password) {
         this.password = password;
     }
 
-    public Boolean getAdmin() {
-        return admin;
+    public UserRole getRole() {
+        return role;
     }
 
-    public void setAdmin(Boolean admin) {
-        this.admin = admin;
+    public void setRole(UserRole role) {
+        this.role = role;
     }
 }

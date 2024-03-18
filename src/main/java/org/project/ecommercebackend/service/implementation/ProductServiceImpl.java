@@ -14,8 +14,12 @@ import java.util.Optional;
 @Service
 public class ProductServiceImpl implements ProductService {
 
+    private final ProductRepository productRepository;
+
     @Autowired
-    private ProductRepository productRepository;
+    public ProductServiceImpl(ProductRepository productRepository) {
+        this.productRepository = productRepository;
+    }
 
     private boolean checkIfProductValid(ProductDTO productDTO) {
         return productDTO != null
@@ -54,7 +58,9 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Optional<ProductDTO> updateProduct(Product product) {
-        return Optional.of(ProductMapper.INSTANCE.toProductDTO(productRepository.save(product)));
+        Product updatedProduct = productRepository.save(product);
+        System.out.println("product saved to db with " + updatedProduct.getStock());
+        return Optional.of(ProductMapper.INSTANCE.toProductDTO(updatedProduct));
     }
 
     @Override
@@ -63,10 +69,8 @@ public class ProductServiceImpl implements ProductService {
         if(existingProduct == null) {
             throw new IllegalArgumentException("Product with this id does not exist");
         }
-        Product product = ProductMapper.INSTANCE.toProduct(
-                ProductMapper.INSTANCE.toProductDTO(existingProduct)
-                        .updateProduct(productDTO)
-        );
+        ProductDTO updatedProductDTO = ProductMapper.INSTANCE.toProductDTO(existingProduct).updateProduct(productDTO);
+        Product product = ProductMapper.INSTANCE.toProduct(updatedProductDTO);
         return updateProduct(product);
     }
 

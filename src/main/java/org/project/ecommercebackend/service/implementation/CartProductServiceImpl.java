@@ -18,18 +18,9 @@ import java.util.Optional;
 public class CartProductServiceImpl implements CartProductService {
 //    @Autowired
     private final CartProductRepository cartProductRepository;
-//    @Autowired
-//    private final CartService cartService;
     private final CartRepository cartRepository;
 //    @Autowired
     private final ProductService productService;
-
-//    @Autowired
-//    public Optional<CartProductServiceImpl>(CartProductRepository cartProductRepository, CartService cartService, ProductService productService) {
-//        this.cartProductRepository = cartProductRepository;
-////        this.cartService = cartService;
-//        this.productService = productService;
-//    }
 
     @Autowired
     public CartProductServiceImpl(CartProductRepository cartProductRepository, CartRepository cartRepository, ProductService productService) {

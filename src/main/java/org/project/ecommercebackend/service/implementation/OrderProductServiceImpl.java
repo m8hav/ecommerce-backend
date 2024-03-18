@@ -17,10 +17,15 @@ import java.util.Optional;
 
 @Service
 public class OrderProductServiceImpl implements OrderProductService {
+    private final OrderProductRepository orderProductRepository;
+    private final ProductService productService;
+
     @Autowired
-    private OrderProductRepository orderProductRepository;
-    @Autowired
-    private ProductService productService;
+    public OrderProductServiceImpl(OrderProductRepository orderProductRepository, ProductService productService) {
+        this.orderProductRepository = orderProductRepository;
+        this.productService = productService;
+    }
+
     @Override
     public Optional<OrderProductDTO> createOrderProduct(CartProduct cartProduct, Order order) {
         ProductDTO productDTO = productService.getProduct(cartProduct.getProductId()).orElse(null);
@@ -41,6 +46,7 @@ public class OrderProductServiceImpl implements OrderProductService {
         );
         orderProduct = orderProductRepository.save(orderProduct);
         productDTO.setStock(productDTO.getStock() - cartProduct.getQuantity());
+        System.out.println("set product stock to " + productDTO.getStock());
         productService.updateProduct(productDTO);
         return Optional.ofNullable(OrderProductMapper.INSTANCE.toOrderProductDTO(orderProduct));
     }

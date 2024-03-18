@@ -3,6 +3,7 @@ package org.project.ecommercebackend.dto.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.project.ecommercebackend.constant.UserRole;
 
 //@Data
 //@NoArgsConstructor
@@ -13,18 +14,18 @@ public class UserDTO {
     private String name;
     private String email;
     private String password;
-    private Boolean admin;
+    private UserRole role;
 
 
     public UserDTO() {
     }
 
-    public UserDTO(Long id, String name, String email, String password, Boolean admin) {
+    public UserDTO(Long id, String name, String email, String password, UserRole role) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
-        this.admin = admin;
+        this.role = role;
     }
 
     public Long getId() {
@@ -59,12 +60,12 @@ public class UserDTO {
         this.password = password;
     }
 
-    public Boolean getAdmin() {
-        return admin;
+    public UserRole getRole() {
+        return role;
     }
 
-    public void setAdmin(Boolean admin) {
-        this.admin = admin;
+    public void setRole(UserRole role) {
+        this.role = role;
     }
 
     public UserDTO update(UserDTO newUserDTO) {
@@ -77,8 +78,8 @@ public class UserDTO {
         if (newUserDTO.getPassword() != null) {
             this.setPassword(newUserDTO.getPassword());
         }
-        if (newUserDTO.getAdmin() != null) {
-            this.setAdmin(newUserDTO.getAdmin());
+        if (newUserDTO.getRole() != null) {
+            this.setRole(newUserDTO.getRole());
         }
         return this;
     }

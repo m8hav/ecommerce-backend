@@ -1,27 +1,7 @@
 
-\
-java:S11613":Add the "@Override" annotation above this method signature(§ß»éıÿÿÿÿ8Í¼î°ä1
-W
-java:S11617":Add the "@Override" annotation above this method signature(ˆÃ»·8Ï¼î°ä1
-W
-java:S1161;":Add the "@Override" annotation above this method signature( …€Ç8Ï¼î°ä1
-W
-java:S1161?":Add the "@Override" annotation above this method signature(­Ù…Õ8Ğ¼î°ä1
-\
-java:S1161C":Add the "@Override" annotation above this method signature(ú›Šøøÿÿÿÿ8Ğ¼î°ä1
-W
-java:S1161G":Add the "@Override" annotation above this method signature(Ò’Š¯8Ğ¼î°ä1
-W
-java:S1161K":Add the "@Override" annotation above this method signature(öï˜€8Ñ¼î°ä1
-\
-java:S1161O":Add the "@Override" annotation above this method signature(Á”ÁÁùÿÿÿÿ8Ñ¼î°ä1
-\
-java:S1161S":Add the "@Override" annotation above this method signature(¸ûƒŸøÿÿÿÿ8Ò¼î°ä1
-\
-java:S1161W":Add the "@Override" annotation above this method signature(ãéô±şÿÿÿÿ8Ó¼î°ä1
-\
-java:S1161[":Add the "@Override" annotation above this method signature(©¿ÀÓûÿÿÿÿ8Ó¼î°ä1
-W
-java:S1161_":Add the "@Override" annotation above this method signature(„†ı¡8Ô¼î°ä1
-W
-java:S1161c":Add the "@Override" annotation above this method signature(”ô‰Ú8Ô¼î°ä1
+X
+java:S1128"6Remove this unused import 'lombok.AllArgsConstructor'.(´œ¾öùÿÿÿÿ8ûóèä1
+J
+java:S1128"(Remove this unused import 'lombok.Data'.(÷í«ÿÿÿÿÿ8ûóèä1
+R
+java:S1128"5Remove this unused import 'lombok.NoArgsConstructor'.(¸¨›8ûóèä1

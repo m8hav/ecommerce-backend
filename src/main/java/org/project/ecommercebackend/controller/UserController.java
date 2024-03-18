@@ -9,22 +9,16 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.MissingFormatArgumentException;
 
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/v1")
 public class UserController {
 
-    @Autowired
-    private UserService userService;
+    private final UserService userService;
 
-    @PostMapping("/users")
-    public UserDTO addUser(@RequestBody UserDTO userDTO) {
-        if (userDTO == null) {
-            throw new IllegalArgumentException("User info is required");
-        }
-        if (userDTO.getId() != null) {
-            throw new IllegalArgumentException("User id must be null");
-        }
-        return userService.addUser(userDTO).orElseThrow(() -> new MissingFormatArgumentException("User not saved"));
+    @Autowired
+    public UserController(UserService userService) {
+        this.userService = userService;
     }
 
     @GetMapping("/users")
@@ -32,9 +26,13 @@ public class UserController {
         return userService.getUsers();
     }
 
-    @GetMapping("/user/{id}")
-    public UserDTO getUserById(@PathVariable Long id) {
-        return userService.getUserById(id).orElseThrow(() -> new IllegalArgumentException("User not found"));
+//    @GetMapping("/user/{id}")
+//    public UserDTO getUserById(@PathVariable Long id) {
+//        return userService.getUserById(id).orElseThrow(() -> new IllegalArgumentException("User not found"));
+//    }
+    @GetMapping("/user")
+    public UserDTO getUser() {
+        return userService.getUserSafe();
     }
 
     @PutMapping("/user")
@@ -42,8 +40,12 @@ public class UserController {
         return userService.updateUser(userDTO).orElseThrow(() -> new MissingFormatArgumentException("User not updated"));
     }
 
-    @DeleteMapping("/user/{id}")
-    public boolean deleteUser(@PathVariable Long id) {
-        return userService.deleteUser(id);
+//    @DeleteMapping("/user/{id}")
+//    public boolean deleteUser(@PathVariable Long id) {
+//        return userService.deleteUser(id);
+//    }
+    @DeleteMapping("/user")
+    public boolean deleteUser() {
+        return userService.deleteUser();
     }
 }

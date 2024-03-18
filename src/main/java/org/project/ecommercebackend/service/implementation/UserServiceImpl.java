@@ -6,6 +6,10 @@ import org.project.ecommercebackend.model.User;
 import org.project.ecommercebackend.repository.UserRepository;
 import org.project.ecommercebackend.service.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,20 +17,30 @@ import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements UserService {
-    @Autowired
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
+//    private final AuthService
 
-    private boolean checkIfUserValid(UserDTO userDTO) {
-        return userDTO != null
-                && userDTO.getName() != null
-                && userDTO.getEmail() != null
-                && userDTO.getPassword() != null
-                && userDTO.getAdmin() != null;
+    @Autowired
+    public UserServiceImpl(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    @Override
+    public String getAuthenticatedUserEmail() {
+        return SecurityContextHolder.getContext().getAuthentication().getName();
+    }
+
+    private boolean isUserInvalid(UserDTO userDTO) {
+        return userDTO == null
+                || userDTO.getName() == null
+                || userDTO.getEmail() == null
+                || userDTO.getPassword() == null
+                || userDTO.getRole() == null;
     }
 
     @Override
     public Optional<UserDTO> addUser(UserDTO userDTO) {
-        if (!checkIfUserValid(userDTO)) {
+        if (isUserInvalid(userDTO)) {
             throw new IllegalArgumentException("All user fields must be provided");
         }
         if (userRepository.findByEmail(userDTO.getEmail()) != null) {
@@ -49,15 +63,38 @@ public class UserServiceImpl implements UserService {
         return user.map(UserMapper.INSTANCE::toUserDTO);
     }
 
+//    @Override
+//    private Optional<UserDTO> getUser() {
+//        return getUserByEmail(getAuthenticatedUserEmail());
+//    }
+
+    @Override
+    public UserDTO getUserSafe() {
+        User user = getUserEntity();
+        user.setId(null);
+        user.setPassword(null);
+        return UserMapper.INSTANCE.toUserDTO(user);
+    }
+
+    @Override
+    public User getUserEntity() {
+        return userRepository.findByEmail(getAuthenticatedUserEmail());
+    }
+
+    @Override
+    public Optional<UserDTO> getUserByEmail(String email) {
+        Optional<User> user = Optional.ofNullable(userRepository.findByEmail(email));
+        return user.map(UserMapper.INSTANCE::toUserDTO);
+    }
+
     @Override
     public Optional<UserDTO> updateUser(UserDTO userDTO) {
-        User existingUser = userRepository.findById(userDTO.getId()).orElse(null);
-        if(existingUser == null) {
-            throw new IllegalArgumentException("User with this id does not exist");
+        if (isUserInvalid(userDTO)) {
+            throw new IllegalArgumentException("All user fields must be provided");
         }
-        User user = UserMapper.INSTANCE.toUser(
-                UserMapper.INSTANCE.toUserDTO(existingUser).update(userDTO));
-        User updatedUser = userRepository.save(user);
+        UserDTO existingUserDTO = getUserByEmail(getAuthenticatedUserEmail()).orElse(null);
+        existingUserDTO.update(userDTO);
+        User updatedUser = userRepository.save(UserMapper.INSTANCE.toUser(existingUserDTO));
         return Optional.ofNullable(UserMapper.INSTANCE.toUserDTO(updatedUser));
     }
 
@@ -68,5 +105,23 @@ public class UserServiceImpl implements UserService {
             return true;
         }
         throw new IllegalArgumentException("User with this id does not exist");
+    }
+
+    @Override
+    public boolean deleteUser() {
+        System.out.println("Reached deleteUser in user service impl");
+        System.out.println(getAuthenticatedUserEmail());
+        return deleteUser(getUserByEmail(getAuthenticatedUserEmail()).orElse(null).getId());
+    }
+
+    @Override
+    public UserDetailsService userDetailsService() {
+        return username -> {
+            UserDetails userDetails = userRepository.findByEmail(username);
+            if(userDetails == null) {
+                throw new UsernameNotFoundException("User Not Found");
+            }
+            return userDetails;
+        };
     }
 }

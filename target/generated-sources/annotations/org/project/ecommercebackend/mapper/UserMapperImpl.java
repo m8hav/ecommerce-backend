@@ -8,7 +8,7 @@ import org.project.ecommercebackend.model.User;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-03-16T23:44:00+0530",
+    date = "2024-03-18T09:26:00+0530",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 17.0.10 (Oracle Corporation)"
 )
 public class UserMapperImpl implements UserMapper {
@@ -25,7 +25,7 @@ public class UserMapperImpl implements UserMapper {
         userDTO.setName( user.getName() );
         userDTO.setEmail( user.getEmail() );
         userDTO.setPassword( user.getPassword() );
-        userDTO.setAdmin( user.getAdmin() );
+        userDTO.setRole( user.getRole() );
 
         return userDTO;
     }
@@ -42,7 +42,7 @@ public class UserMapperImpl implements UserMapper {
         user.setName( userDTO.getName() );
         user.setEmail( userDTO.getEmail() );
         user.setPassword( userDTO.getPassword() );
-        user.setAdmin( userDTO.getAdmin() );
+        user.setRole( userDTO.getRole() );
 
         return user;
     }

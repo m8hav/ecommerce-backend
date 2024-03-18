@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
+//@Service
 public interface CartProductService {
     Optional<CartProduct> createCartProduct(Long productId, Long cartId);
     Optional<CartProduct> getCartProduct(Long productId, Long cartId);

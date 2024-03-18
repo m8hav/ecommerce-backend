@@ -8,15 +8,21 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/v1")
 public class ProductController {
 
-    @Autowired
-    private ProductService productService;
+    private final ProductService productService;
 
-    @PostMapping(value = "/products")
-    public ProductDTO saveProduct(@RequestBody ProductDTO productDTO) {
+    @Autowired
+    public ProductController(ProductService productService) {
+        this.productService = productService;
+    }
+
+
+    @PostMapping(value = "products")
+    public ProductDTO addProduct(@RequestBody ProductDTO productDTO) {
         return productService.addProduct(productDTO).orElseThrow(() -> new IllegalArgumentException("Product info is required"));
     }
 
@@ -30,7 +36,7 @@ public class ProductController {
         return productService.getProduct(id).orElseThrow(() -> new IllegalArgumentException("Product not found"));
     }
 
-    @PutMapping("/product")
+    @PutMapping("product")
     public ProductDTO updateProduct(@RequestBody ProductDTO productDTO) {
         if (productDTO == null || productDTO.getId() == null) {
             throw new IllegalArgumentException("Product id is required");
@@ -38,7 +44,7 @@ public class ProductController {
         return productService.updateProduct(productDTO).orElseThrow(() -> new IllegalArgumentException("Product not found"));
     }
 
-    @DeleteMapping("/product/{id}")
+    @DeleteMapping("product/{id}")
     public boolean deleteProduct(@PathVariable Long id) {
         if (productService.deleteProduct(id)) {
             return true;

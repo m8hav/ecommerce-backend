@@ -1,16 +1,3 @@
 
-…
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Ç¢‡Âä1J$8b577e9b-1cd4-4934-8f7b-3881df274439
-…
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8Ç¢‡Âä1J$8f30a97e-92bb-40ca-b2f5-4bcf1caae403
-…
-java:S6813 "BRemove this field injection and use constructor injection instead.(êæÄŞ8Ç¢‡Âä1J$d20186b8-6aad-4a0e-81b5-2d3f5251925f
-L	java:S1067"+Replace this use of System.out by a logger.(Ó›¬œøÿÿÿÿ8É–‰Âä1
-“
-java:S1128"KRemove this unused import 'org.project.ecommercebackend.dto.model.CartDTO'.(–äï°ıÿÿÿÿ8Ï¢‡Âä1J$fb0578ab-f95d-44a9-b330-36c5653ab078
-•
-java:S1128"RRemove this unused import 'org.project.ecommercebackend.dto.model.CartProductDTO'.(°ã¶œ8Ğ¢‡Âä1J$e2cdbd41-b05e-4e73-8cbf-de3fc5679261
-”
-java:S1128"RRemove this unused import 'org.project.ecommercebackend.mapper.CartProductMapper'.(»ê@8Ğ¢‡Âä1J$1ec6f787-219e-49aa-adcc-e88fbaa3a935
-›
-java:S1128"XRemove this unused import 'org.project.ecommercebackend.service.service.ProductService'.(ÔíÊ£8Ğ¢‡Âä1J$6ab3f9f5-3eb7-4eb8-a367-b461ce272fed
+r	java:S1068"+Replace this use of System.out by a logger.(Ó›¬œøÿÿÿÿ8Æšôä1J$fca5f1c2-8c6c-415f-93d3-0964ed63a1b8
+r	java:S106Y"+Replace this use of System.out by a logger.(Ó›¬œøÿÿÿÿ8Êšôä1J$a8c48d2e-1548-46ea-9997-a84289835d3c
