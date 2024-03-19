@@ -6,8 +6,6 @@ import org.mapstruct.factory.Mappers;
 import org.project.ecommercebackend.dto.model.CartDTO;
 import org.project.ecommercebackend.model.Cart;
 
-import java.util.List;
-
 @Mapper
 public interface CartMapper {
     CartMapper INSTANCE = Mappers.getMapper(CartMapper.class);

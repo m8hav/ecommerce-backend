@@ -1,14 +1,2 @@
 
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(â»ğùÿÿÿÿ8æ’İ†å1J$ac6a3afa-3fa1-4646-b141-7ae2aac5928a
-ƒ	java:S125$"<This block of commented-out lines of code should be removed.(Úƒûÿÿÿÿ8ö­Ïå1J$a312d7b7-cfc5-4471-819b-e21b0c81b940
-ƒ	java:S125)"<This block of commented-out lines of code should be removed.(­æøæıÿÿÿÿ8ÅÅÏå1J$9382bb38-d533-400b-acda-b803336201f4
-ƒ	java:S125,"<This block of commented-out lines of code should be removed.(½– ïûÿÿÿÿ8½ãÏå1J$af7f7ecb-8026-466c-a52a-6f7e502820b6
-~	java:S1250"<This block of commented-out lines of code should be removed.(‰õÔˆ8çŒß†å1J$cc0f5eec-f501-4d6a-8cb8-cba575c43662
-ƒ	java:S1257"<This block of commented-out lines of code should be removed.(®½ùşÿÿÿÿ8ÎŒĞå1J$7e200900-1107-4cc5-ab21-9c8ddaece087
-~	java:S125>"<This block of commented-out lines of code should be removed.(ì¼ÜÉ8ÏŒĞå1J$5ffbacef-19da-465d-a203-0b847c9fcdc5
-ƒ	java:S125C"<This block of commented-out lines of code should be removed.(ç˜ŠÜşÿÿÿÿ8­Ñå1J$2f8d48e8-599a-4ec9-93f6-e652a04e979c
-ƒ	java:S125L"<This block of commented-out lines of code should be removed.(ß¼°‰ıÿÿÿÿ8º·Ğå1J$d578fade-ec40-4011-84b8-484dacc45bb5
-¶
-java:S1128	"sRemove this unused import 'org.springframework.security.authentication.AuthenticationCredentialsNotFoundException'.(Û´µ8êŒß†å1J$593f0103-7049-444a-a085-c79709fb161f
-—
-java:S1128"ORemove this unused import 'org.hibernate.sql.ast.SqlTreeCreationLogger.LOGGER'.(šÛ´æúÿÿÿÿ8í¥Ş†å1J$62427906-8bd9-432e-9841-d252b458b681
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(â»ğùÿÿÿÿ8æ’İ†å1J$1ed4bbc3-0d51-4e5b-8bc6-83a9c3d91c36

@@ -1,16 +1,8 @@
 package org.project.ecommercebackend.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import java.util.List;
 import java.util.Set;
 
-//@Data
-//@AllArgsConstructor
-//@NoArgsConstructor
 @Entity
 @Table(name = "carts")
 public class Cart {
@@ -24,7 +16,7 @@ public class Cart {
     @Column(nullable = false)
     private Double total;
 
-    @OneToMany(mappedBy = "cart", cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy = "cart", cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
     private Set<CartProduct> cartProducts;
 
     public Cart() {

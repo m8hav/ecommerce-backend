@@ -1,15 +1,8 @@
 package org.project.ecommercebackend.dto.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.project.ecommercebackend.model.Order;
-
 import java.util.Date;
 import java.util.List;
 
-//@Data
-//@NoArgsConstructor
 public class OrderDTO {
     private Long id;
     private Long userId;

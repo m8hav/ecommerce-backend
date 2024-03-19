@@ -7,8 +7,6 @@ Ksrc/main/java/org/project/ecommercebackend/EcommerceBackendApplication.java,6/
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
 4
 mvnw,5/d/5d837c4ed85ecaaf932c506e80ff5d7b9f3d590d
-{
-Ksrc/test/java/org/project/ecommercebackend/service/CartServiceImplTest.java,1/6/16faca7f48edbd5204e7d71c55e5899d1e017bd0
 q
 Asrc/main/java/org/project/ecommercebackend/mapper/UserMapper.java,c/f/cf2569ae266aa69c03464b1a224024d8c531b3da
 q
@@ -145,10 +143,6 @@ Q.idea/sonarlint/securityhotspotstore/9/c/9c0f1a1646046da7b88c2dc7230e6df368e2ec
 Lsrc/main/java/org/project/ecommercebackend/repository/ProductRepository.java,6/7/67602b7e5ec3ec831d3cd93893ed32c1254954d9
 t
 Dsrc/main/java/org/project/ecommercebackend/mapper/ProductMapper.java,1/a/1a83a7b1244ab8336ea2c3698a7b3eb3a74ff6cd
-ä
-Zsrc/test/java/org/project/ecommercebackend/service/implementation/CartServiceImplTest.java,5/5/55781547c0824f25259859fe2bcfa63feb8b67d2
-ä
-Zsrc/test/java/org/project/ecommercebackend/service/implementation/UserServiceImplTest.java,6/a/6a70b468a180c1fecacf482f57a9c5ccff19c5cb
 Å
 Q.idea/sonarlint/securityhotspotstore/5/5/55781547c0824f25259859fe2bcfa63feb8b67d2,d/8/d8bc227956c1e86e151c1e321216b470d613ce41
 Å
@@ -159,3 +153,5 @@ G.idea/sonarlint/issuestore/1/a/1a83a7b1244ab8336ea2c3698a7b3eb3a74ff6cd,e/8/e8
 Q.idea/sonarlint/securityhotspotstore/1/a/1a83a7b1244ab8336ea2c3698a7b3eb3a74ff6cd,1/8/18904bb494b7b62aab27b7d56b03977cf02b8ccb
 Å
 Q.idea/sonarlint/securityhotspotstore/6/7/67602b7e5ec3ec831d3cd93893ed32c1254954d9,b/2/b254a02b8b72c8807f1b932ae629275c73b50b7c
+ç
+]src/test/java/org/project/ecommercebackend/service/implementation/ProductServiceImplTest.java,f/8/f87f6271ff30be66301ebc7c4849a8f607086457

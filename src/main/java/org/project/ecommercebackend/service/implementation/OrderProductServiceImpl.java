@@ -1,7 +1,6 @@
 package org.project.ecommercebackend.service.implementation;
 
 import org.project.ecommercebackend.dto.model.OrderProductDTO;
-import org.project.ecommercebackend.dto.model.ProductDTO;
 import org.project.ecommercebackend.mapper.OrderProductMapper;
 import org.project.ecommercebackend.model.CartProduct;
 import org.project.ecommercebackend.model.Order;
@@ -26,31 +25,6 @@ public class OrderProductServiceImpl implements OrderProductService {
         this.orderProductRepository = orderProductRepository;
         this.productService = productService;
     }
-
-//    @Override
-//    public Optional<OrderProductDTO> createOrderProduct(CartProduct cartProduct, Order order) {
-//        ProductDTO productDTO = productService.getProduct(cartProduct.getProductId()).orElse(null);
-//        if (productDTO == null) {
-//            throw new IllegalArgumentException("Product with this id does not exist");
-//        }
-//        if (productDTO.getStock() < cartProduct.getQuantity()) {
-//            throw new IllegalArgumentException("Not enough stock");
-//        }
-//        OrderProduct orderProduct = new OrderProduct(
-//                null,
-//                cartProduct.getProductId(),
-//                cartProduct.getName(),
-//                cartProduct.getImageUrl(),
-//                cartProduct.getPrice(),
-//                cartProduct.getQuantity(),
-//                order
-//        );
-////        orderProduct = orderProductRepository.save(orderProduct);
-//        productDTO.setStock(productDTO.getStock() - cartProduct.getQuantity());
-////        System.out.println("set product stock to " + productDTO.getStock());
-//        productService.updateProduct(productDTO);
-//        return Optional.ofNullable(OrderProductMapper.INSTANCE.toOrderProductDTO(orderProduct));
-//    }
 
 
     @Override
@@ -83,9 +57,7 @@ public class OrderProductServiceImpl implements OrderProductService {
                 quantity,
                 order
         );
-//        orderProduct = orderProductRepository.save(orderProduct);
         product.setStock(product.getStock() - quantity);
-//        System.out.println("set product stock to " + product.getStock());
         productService.updateProduct(product);
         return orderProduct;
     }

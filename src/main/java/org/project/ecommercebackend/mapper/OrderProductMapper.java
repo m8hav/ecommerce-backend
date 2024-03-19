@@ -11,11 +11,9 @@ import java.util.List;
 @Mapper
 public interface OrderProductMapper {
     OrderProductMapper INSTANCE = Mappers.getMapper(OrderProductMapper.class);
-
     @Mapping(target = "order", ignore = true)
     OrderProductDTO toOrderProductDTO(OrderProduct orderProduct);
     OrderProduct toOrderProduct(OrderProductDTO orderProductDTO);
     List<OrderProductDTO> toOrderProductDTOList(List<OrderProduct> orderProducts);
-
     List<OrderProductDTO> toOrderProductDTOs(List<OrderProduct> orderProducts);
 }

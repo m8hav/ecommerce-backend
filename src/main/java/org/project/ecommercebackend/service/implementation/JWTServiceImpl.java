@@ -1,7 +1,6 @@
 package org.project.ecommercebackend.service.implementation;
 
 import io.jsonwebtoken.Claims;
-
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Decoders;
@@ -41,7 +40,7 @@ public class JWTServiceImpl implements JWTService {
 
     @Override
     public Key getSignKey(){
-        byte[] Key= Decoders.BASE64.decode("363EYDGDDGG2818273GDG83V3D82berbiefbiweu90230939et438f4gfg9ffy9ry3fy340fy4343y9y843nf4nyy43392443434993u40u043u9fu49u934umfmuf4um90f34mu093mu934mu09u9043fu904309u454854984fr9mjfiffffffo000300309858584y84y4yr84y884y848fy4");
+        byte[] Key = Decoders.BASE64.decode("363EYDGDDGG2818273GDG83V3D82berbiefbiweu90230939et438f4gfg9ffy9ry3fy340fy4343y9y843nf4nyy43392443434993u40u043u9fu49u934umfmuf4um90f34mu093mu934mu09u9043fu904309u454854984fr9mjfiffffffo000300309858584y84y4yr84y884y848fy4");
         return Keys.hmacShaKeyFor(Key);
     }
 
@@ -51,8 +50,8 @@ public class JWTServiceImpl implements JWTService {
     }
 
     @Override
-    public <T> T extractClaim(String Token, Function<Claims, T> claimsResolvers){
-        final Claims claims=extractAllClaims(Token);
+    public <T> T extractClaim(String token, Function<Claims, T> claimsResolvers){
+        final Claims claims=extractAllClaims(token);
         return claimsResolvers.apply(claims);
     }
 

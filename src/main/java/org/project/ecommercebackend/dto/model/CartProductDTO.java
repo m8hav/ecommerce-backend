@@ -1,13 +1,5 @@
 package org.project.ecommercebackend.dto.model;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.project.ecommercebackend.model.CartProduct;
-
-import java.util.List;
-
-//@Data
-//@NoArgsConstructor
 public class CartProductDTO {
     private Long id;
     private Long productId;

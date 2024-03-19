@@ -1,9 +1,9 @@
 
 ˆ
 java:S2259~"EA "NullPointerException" could be thrown; "orElse()" can return null.(¯†ŒŠ8Å¿ÃŠå1J$2ef8892a-b38f-49f9-8074-3f9ea0fc7d5c
-
-java:S2259`"H"NullPointerException" will be thrown when invoking method "safeUser()".(—–ü®ÿÿÿÿÿ8ÖøÅŠå1J$f82225ea-70a9-442c-b596-eaa8d8171b9f
-
-java:S2259n"EA "NullPointerException" could be thrown; "userDTO" is nullable here.(İ£ ïúÿÿÿÿ8Å¿ÃŠå1J$4a8b6e71-95dc-4c2a-a95a-25cf033344fb
 •
 java:S2259c"MA "NullPointerException" could be thrown; "existingUserDTO" is nullable here.(Ùíı²ùÿÿÿÿ8Æ¿ÃŠå1J$8e2935c8-7d95-4ac6-9456-a341069bf9ad
+
+java:S2259n"EA "NullPointerException" could be thrown; "userDTO" is nullable here.(İ£ ïúÿÿÿÿ8Å¿ÃŠå1J$4a8b6e71-95dc-4c2a-a95a-25cf033344fb
+
+java:S2259`"H"NullPointerException" will be thrown when invoking method "safeUser()".(—–ü®ÿÿÿÿÿ8ÖøÅŠå1J$f82225ea-70a9-442c-b596-eaa8d8171b9f

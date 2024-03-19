@@ -1,8 +1,5 @@
 package org.project.ecommercebackend.dto.request;
 
-//@Data
-//@AllArgsConstructor
-//@NoArgsConstructor
 public class OrderRequestDTO {
     private Long userId;
     private String address;

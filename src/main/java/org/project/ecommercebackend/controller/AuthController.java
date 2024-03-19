@@ -31,7 +31,6 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<SigninResponseDTO> logIn(@RequestBody UserDTO userDTO){
-//        System.out.println("Reached logIn in auth controller");
         return ResponseEntity.ok(authService.logIn(userDTO));
     }
 }

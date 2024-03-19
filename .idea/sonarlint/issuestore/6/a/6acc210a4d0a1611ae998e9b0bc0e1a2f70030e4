@@ -1,15 +1,13 @@
 
-	java:S112q"FDefine and throw a dedicated exception instead of using a generic one.(±îÃüÿÿÿÿ8İ§÷®å1J$3b68d63d-1717-425d-93a6-cb138559448f
-	java:S112€"FDefine and throw a dedicated exception instead of using a generic one.(±îÃüÿÿÿÿ8İ§÷®å1J$05fdc341-f722-4c5c-b45e-d7ce28645433
+	java:S112q"FDefine and throw a dedicated exception instead of using a generic one.(±îÃüÿÿÿÿ8İ§÷®å1J$df37fe0a-91ef-4ac3-87f4-221fb370f590
+	java:S112€"FDefine and throw a dedicated exception instead of using a generic one.(±îÃüÿÿÿÿ8İ§÷®å1J$48261fe7-8a76-4393-9e5f-1c04032bd7ce
 £
-java:S1192â"_Define a constant instead of duplicating this literal "Product does not exist in cart" 4 times.(Ô¼’Ó8à§÷®å1J$d6a91f58-967b-430b-8b49-5a5b21364316
+java:S1192â"_Define a constant instead of duplicating this literal "Product does not exist in cart" 4 times.(Ô¼’Ó8à§÷®å1J$4f587a97-b35f-4c3b-ad9e-c0cd24e0e67d
  
-java:S1192"WDefine a constant instead of duplicating this literal "Product does not exist" 4 times.(­Íõİüÿÿÿÿ8á§÷®å1J$9fafcfdb-0b98-4844-a14b-019bf2b59c22
+java:S1192"WDefine a constant instead of duplicating this literal "Product does not exist" 4 times.(­Íõİüÿÿÿÿ8á§÷®å1J$d2517ec9-324f-4009-a880-e10430ce9b73
 ª
-java:S1192I"bDefine a constant instead of duplicating this literal "Cart for this user does not exist" 5 times.(¦ç¬Éøÿÿÿÿ8á§÷®å1J$8a0a735e-2c40-4771-bf5f-2ac2d2a26087
+java:S1192I"bDefine a constant instead of duplicating this literal "Cart for this user does not exist" 5 times.(¦ç¬Éøÿÿÿÿ8á§÷®å1J$435a3e8a-d0ec-4ba2-859c-3bb03fcf321b
 †
-java:S2259Ö"BA "NullPointerException" could be thrown; "cart" is nullable here.(·ãÑ×8Ò¨÷®å1J$6d47cd4e-2a12-4d9a-bbc3-b4ff7fd01f41
+java:S2259Ö"BA "NullPointerException" could be thrown; "cart" is nullable here.(·ãÑ×8Ò¨÷®å1J$3d3bd9c9-2f46-4520-8b06-2a07e0342f53
 †
-java:S2259ö"BA "NullPointerException" could be thrown; "cart" is nullable here.(·ãÑ×8Ò¨÷®å1J$a4371d3a-8256-4922-ad31-5771e27cb86b
-	java:S125¿"<This block of commented-out lines of code should be removed.(àã¶±8õ¨÷®å1J$612263dc-330b-406f-8c1b-8251cfe0294f
-	java:S125Ï"<This block of commented-out lines of code should be removed.(àã¶±8÷¨÷®å1J$32d9d887-3fca-43c8-ba05-d430b76f4d27
+java:S2259ö"BA "NullPointerException" could be thrown; "cart" is nullable here.(·ãÑ×8Ò¨÷®å1J$f633a167-2c6d-49d2-9f39-ba5248c58b26

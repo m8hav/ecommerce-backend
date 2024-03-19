@@ -1,17 +1,11 @@
 package org.project.ecommercebackend.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.util.Date;
 import java.util.List;
 
-//@Data
-//@AllArgsConstructor
-//@NoArgsConstructor
 @Entity
 @Table(name = "orders")
 public class Order {

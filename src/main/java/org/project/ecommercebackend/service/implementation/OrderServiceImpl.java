@@ -1,7 +1,5 @@
 package org.project.ecommercebackend.service.implementation;
 
-import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
 import org.project.ecommercebackend.dto.model.OrderDTO;
 import org.project.ecommercebackend.dto.model.OrderProductDTO;

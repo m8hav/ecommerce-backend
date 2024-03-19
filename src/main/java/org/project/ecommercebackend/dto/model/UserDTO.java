@@ -1,13 +1,7 @@
 package org.project.ecommercebackend.dto.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.project.ecommercebackend.constant.UserRole;
 
-//@Data
-//@NoArgsConstructor
-//@AllArgsConstructor
 public class UserDTO {
 
     private Long id;
@@ -15,7 +9,6 @@ public class UserDTO {
     private String email;
     private String password;
     private UserRole role;
-
 
     public UserDTO() {
     }

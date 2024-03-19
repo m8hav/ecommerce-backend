@@ -2,14 +2,11 @@ package org.project.ecommercebackend.service.service;
 
 import org.project.ecommercebackend.dto.model.UserDTO;
 import org.project.ecommercebackend.model.User;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-//@Service
 public interface UserService {
     String getAuthenticatedUserEmail();
 
