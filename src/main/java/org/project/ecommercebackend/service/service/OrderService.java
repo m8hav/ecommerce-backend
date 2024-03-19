@@ -8,11 +8,11 @@ import java.util.Optional;
 //@Service
 public interface OrderService {
 
-    Optional<OrderDTO> createOrder(Long userId, String address, String paymentMethod);
+//    Optional<OrderDTO> createOrder(Long userId, String address, String paymentMethod);
 
     Optional<OrderDTO> createOrder(String address, String paymentMethod);
 
-    List<OrderDTO> getOrdersByUserId(Long userId);
+//    List<OrderDTO> getOrdersByUserId(Long userId);
 
     List<OrderDTO> getUserOrders();
 

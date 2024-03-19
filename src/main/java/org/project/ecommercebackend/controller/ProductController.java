@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Set;
 
 @CrossOrigin(origins = "http://localhost:5173")
 @RestController
@@ -34,6 +35,11 @@ public class ProductController {
     @GetMapping("/product/{id}")
     public ProductDTO getProductById(@PathVariable Long id) {
         return productService.getProduct(id).orElseThrow(() -> new IllegalArgumentException("Product not found"));
+    }
+
+    @GetMapping("/products/search/{searchString}")
+    public Set<ProductDTO> getProductsBySearch(@PathVariable String searchString) {
+        return productService.getProductsBySearch(searchString);
     }
 
     @PutMapping("product")

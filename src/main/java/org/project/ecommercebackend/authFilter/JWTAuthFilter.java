@@ -33,15 +33,15 @@ public class JWTAuthFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-        System.out.println("Reached doFilterInternal in JWTAuthFilter");
+//        System.out.println("Reached doFilterInternal in JWTAuthFilter");
         final String authHeader = request.getHeader("Authorization");
         final String jwt;
         final String userEmail;
 
-        System.out.println("authHeader: " + authHeader);
+//        System.out.println("authHeader: " + authHeader);
 
         if(authHeader == null || !authHeader.startsWith("Bearer")){
-            System.out.println("Reached doFilterInternal in JWTAuthFilter after header check success");
+//            System.out.println("Reached doFilterInternal in JWTAuthFilter after header check success");
             filterChain.doFilter(request,response);
             return;
         }
@@ -52,19 +52,19 @@ public class JWTAuthFilter extends OncePerRequestFilter {
 //                    "JWT Token is either missing from HTTP header or has been provided in an incorrect format!");
 //        }
 
-        System.out.println("Reached doFilterInternal in JWTAuthFilter after header check failed");
+//        System.out.println("Reached doFilterInternal in JWTAuthFilter after header check failed");
 
         jwt = authHeader.substring(7);
         userEmail=jwtService.extractUserName(jwt);
 
         if(!userEmail.isEmpty() && SecurityContextHolder.getContext().getAuthentication() == null ){
 
-            System.out.println("Reached doFilterInternal in JWTAuthFilter after userEmail check success");
+//            System.out.println("Reached doFilterInternal in JWTAuthFilter after userEmail check success");
 
             UserDetails userDetails = userService.userDetailsService().loadUserByUsername(userEmail);
             if(jwtService.isTokenValid(jwt,userDetails)){
 
-                System.out.println("Reached doFilterInternal in JWTAuthFilter after token check success");
+//                System.out.println("Reached doFilterInternal in JWTAuthFilter after token check success");
 
                 SecurityContext securityContext = SecurityContextHolder.createEmptyContext();
                 UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
@@ -73,7 +73,7 @@ public class JWTAuthFilter extends OncePerRequestFilter {
                 SecurityContextHolder.setContext(securityContext);
             }
         }
-        System.out.println("Reached doFilterInternal in JWTAuthFilter before filter chain");
+//        System.out.println("Reached doFilterInternal in JWTAuthFilter before filter chain");
         filterChain.doFilter(request,response);
     }
 }

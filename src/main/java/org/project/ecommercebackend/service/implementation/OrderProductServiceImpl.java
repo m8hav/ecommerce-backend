@@ -6,6 +6,7 @@ import org.project.ecommercebackend.mapper.OrderProductMapper;
 import org.project.ecommercebackend.model.CartProduct;
 import org.project.ecommercebackend.model.Order;
 import org.project.ecommercebackend.model.OrderProduct;
+import org.project.ecommercebackend.model.Product;
 import org.project.ecommercebackend.repository.OrderProductRepository;
 import org.project.ecommercebackend.service.service.OrderProductService;
 import org.project.ecommercebackend.service.service.ProductService;
@@ -26,17 +27,35 @@ public class OrderProductServiceImpl implements OrderProductService {
         this.productService = productService;
     }
 
+//    @Override
+//    public Optional<OrderProductDTO> createOrderProduct(CartProduct cartProduct, Order order) {
+//        ProductDTO productDTO = productService.getProduct(cartProduct.getProductId()).orElse(null);
+//        if (productDTO == null) {
+//            throw new IllegalArgumentException("Product with this id does not exist");
+//        }
+//        if (productDTO.getStock() < cartProduct.getQuantity()) {
+//            throw new IllegalArgumentException("Not enough stock");
+//        }
+//        OrderProduct orderProduct = new OrderProduct(
+//                null,
+//                cartProduct.getProductId(),
+//                cartProduct.getName(),
+//                cartProduct.getImageUrl(),
+//                cartProduct.getPrice(),
+//                cartProduct.getQuantity(),
+//                order
+//        );
+////        orderProduct = orderProductRepository.save(orderProduct);
+//        productDTO.setStock(productDTO.getStock() - cartProduct.getQuantity());
+////        System.out.println("set product stock to " + productDTO.getStock());
+//        productService.updateProduct(productDTO);
+//        return Optional.ofNullable(OrderProductMapper.INSTANCE.toOrderProductDTO(orderProduct));
+//    }
+
+
     @Override
-    public Optional<OrderProductDTO> createOrderProduct(CartProduct cartProduct, Order order) {
-        ProductDTO productDTO = productService.getProduct(cartProduct.getProductId()).orElse(null);
-        if (productDTO == null) {
-            throw new IllegalArgumentException("Product with this id does not exist");
-        }
-        if (productDTO.getStock() < cartProduct.getQuantity()) {
-            throw new IllegalArgumentException("Not enough stock");
-        }
-        OrderProduct orderProduct = new OrderProduct(
-                null,
+    public OrderProduct createOrderProduct(CartProduct cartProduct, Order order) {
+        return createOrderProduct(
                 cartProduct.getProductId(),
                 cartProduct.getName(),
                 cartProduct.getImageUrl(),
@@ -44,11 +63,31 @@ public class OrderProductServiceImpl implements OrderProductService {
                 cartProduct.getQuantity(),
                 order
         );
-        orderProduct = orderProductRepository.save(orderProduct);
-        productDTO.setStock(productDTO.getStock() - cartProduct.getQuantity());
-        System.out.println("set product stock to " + productDTO.getStock());
-        productService.updateProduct(productDTO);
-        return Optional.ofNullable(OrderProductMapper.INSTANCE.toOrderProductDTO(orderProduct));
+    }
+
+    @Override
+    public OrderProduct createOrderProduct(Long productId, String name, String imageUrl, double price, int quantity, Order order) {
+        Product product = productService.getProductEntity(productId).orElse(null);
+        if (product == null) {
+            throw new IllegalArgumentException("Product with this id does not exist");
+        }
+        if (product.getStock() < quantity) {
+            throw new IllegalArgumentException("Not enough stock");
+        }
+        OrderProduct orderProduct = new OrderProduct(
+                null,
+                productId,
+                name,
+                imageUrl,
+                price,
+                quantity,
+                order
+        );
+//        orderProduct = orderProductRepository.save(orderProduct);
+        product.setStock(product.getStock() - quantity);
+//        System.out.println("set product stock to " + product.getStock());
+        productService.updateProduct(product);
+        return orderProduct;
     }
 
     @Override

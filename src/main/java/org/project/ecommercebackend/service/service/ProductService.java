@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 //@Service
 public interface ProductService {
@@ -15,6 +16,7 @@ public interface ProductService {
 
     Optional<ProductDTO> getProduct(Long id);
     Optional<Product> getProductEntity(Long id);
+    Set<ProductDTO> getProductsBySearch(String searchString);
 
     Optional<ProductDTO> updateProduct(Product product);
 

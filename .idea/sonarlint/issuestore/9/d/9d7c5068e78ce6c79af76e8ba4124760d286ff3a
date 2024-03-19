@@ -1,2 +1,6 @@
 
-r	java:S1061"+Replace this use of System.out by a logger.(ÈÎ¥¯úÿÿÿÿ8ÔÕøõä1J$da0b75b4-4540-494b-a478-7c5fd9a3cf3f
+ƒ	java:S125"<This block of commented-out lines of code should be removed.(Æ•«øÿÿÿÿ8ÄËù«å1J$0e6fe234-c53b-483f-90fc-2e489c4784e9
+~	java:S125V"<This block of commented-out lines of code should be removed.(¢ñŞá8ÈËù«å1J$9b366d72-3b0f-421d-8379-a6f05bf6b731
+ƒ	java:S125X"<This block of commented-out lines of code should be removed.(ûŸªµıÿÿÿÿ8ÈËù«å1J$7c5c9625-3021-40bf-ac86-122482d6ad1d
+–
+java:S1128"NRemove this unused import 'org.project.ecommercebackend.dto.model.ProductDTO'.(öü÷êşÿÿÿÿ8‰å’¬å1J$02e20b47-c7eb-4961-bc0b-429b969fcb82

@@ -22,9 +22,7 @@ public class Order {
     @Column(nullable = false, updatable = false)
     private Long userId;
 
-    @Column(nullable = false)
-    // left updatable = false to allow setting total after creating order
-    // and calculating total while creating order products
+    @Column(nullable = false, updatable = false)
     private Double total;
 
     @Column(nullable = false, updatable = false)
@@ -38,7 +36,7 @@ public class Order {
     @Column(nullable = false, updatable = false)
     private Date date;
 
-    @OneToMany(mappedBy = "order", cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<OrderProduct> orderProducts;
 
     public Order() {

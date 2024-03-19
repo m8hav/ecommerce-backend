@@ -3,3 +3,15 @@
 java:S1192K"ODefine a constant instead of duplicating this literal "/v1/product/**" 3 times.(ÌÚşºÿÿÿÿÿ8¯åÿùä1J$b353b877-1e21-493d-825a-5913e836a2e4
 }	java:S125"<This block of commented-out lines of code should be removed.(ûŠ†8¿åÿùä1J$52c75e56-25fb-46c9-bc57-e6e4ab987d6e
 ƒ	java:S125:"<This block of commented-out lines of code should be removed.(ÉÏØúıÿÿÿÿ8†©ø…å1J$398db90c-92e8-42fc-a8ef-4b2eaf319f09
+`
+java:S1128"DRemove this unused import 'jakarta.servlet.http.HttpServletRequest'.(õ38»ìÀ­å1
+g
+java:S1128"KRemove this unused import 'org.springframework.web.cors.CorsConfiguration'.(î¤·`8¼ìÀ­å1
+s
+java:S1128"QRemove this unused import 'org.springframework.web.cors.CorsConfigurationSource'.(ŒºÏøşÿÿÿÿ8¼ìÀ­å1
+O
+java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8¼ìÀ­å1
+T
+java:S1128"2Remove this unused import 'java.util.Collections'.(¢³ïÓşÿÿÿÿ8¼ìÀ­å1
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8½ìÀ­å1

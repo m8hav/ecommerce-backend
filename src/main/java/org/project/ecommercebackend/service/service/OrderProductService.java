@@ -11,7 +11,10 @@ import java.util.Optional;
 
 //@Service
 public interface OrderProductService {
-    Optional<OrderProductDTO> createOrderProduct(CartProduct cartProduct, Order order);
+//    Optional<OrderProductDTO> createOrderProduct(CartProduct cartProduct, Order order);
+    OrderProduct createOrderProduct(CartProduct cartProduct, Order order);
+
+    OrderProduct createOrderProduct(Long productId, String name, String imageUrl, double price, int quantity, Order order);
 
     List<OrderProduct> getOrderProducts(Long id);
     Optional<OrderProductDTO> getOrderProduct(Long id);

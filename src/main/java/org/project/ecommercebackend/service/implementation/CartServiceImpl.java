@@ -316,7 +316,7 @@ public class CartServiceImpl implements CartService {
         }
         cartProducts.clear();
         cart.setTotal(0.0);
-        System.out.println(cart.getTotal());
+//        System.out.println(cart.getTotal());
         return cartRepository.save(cart).getTotal() == 0.0;
     }
 
@@ -332,7 +332,7 @@ public class CartServiceImpl implements CartService {
         }
         cartProducts.clear();
         cart.setTotal(0.0);
-        System.out.println(cart.getTotal());
+//        System.out.println(cart.getTotal());
         return cartRepository.save(cart).getTotal() == 0.0;
     }
 

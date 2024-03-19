@@ -1,14 +1,16 @@
 package org.project.ecommercebackend.mapper;
 
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 import javax.annotation.processing.Generated;
 import org.project.ecommercebackend.dto.model.ProductDTO;
 import org.project.ecommercebackend.model.Product;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-03-18T09:26:00+0530",
+    date = "2024-03-19T13:55:25+0530",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 17.0.10 (Oracle Corporation)"
 )
 public class ProductMapperImpl implements ProductMapper {
@@ -61,5 +63,19 @@ public class ProductMapperImpl implements ProductMapper {
         }
 
         return list;
+    }
+
+    @Override
+    public Set<ProductDTO> toProductDTOSet(Set<Product> products) {
+        if ( products == null ) {
+            return null;
+        }
+
+        Set<ProductDTO> set = new LinkedHashSet<ProductDTO>( Math.max( (int) ( products.size() / .75f ) + 1, 16 ) );
+        for ( Product product : products ) {
+            set.add( toProductDTO( product ) );
+        }
+
+        return set;
     }
 }

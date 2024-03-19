@@ -1,14 +1,14 @@
 
-¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(â»ğùÿÿÿÿ8æ’İ†å1J$2c3eb118-b1a3-408e-bc5d-32b83c29404e
-m	java:S106$"+Replace this use of System.out by a logger.(è“ö‰8û’İ†å1J$f40a4ed2-a471-44ee-91aa-36d300a08096
-l	java:S106)"+Replace this use of System.out by a logger.(î°ÿ%8ü’İ†å1J$fe5e8fe1-df19-4d18-951a-04be72b47860
-l	java:S106,"+Replace this use of System.out by a logger.(¢Ê¿v8ı’İ†å1J$48134d71-f6fb-44f8-be31-e038fde9356a
-m	java:S1067"+Replace this use of System.out by a logger.(«²¶8ş’İ†å1J$bc80f8c5-57be-4512-8f4c-43f267bf7106
-X	java:S1250"<This block of commented-out lines of code should be removed.(‰õÔˆ8çŒß†å1
-r	java:S106>"+Replace this use of System.out by a logger.(±Û†˜ÿÿÿÿÿ8ş’İ†å1J$a224539c-6592-4b83-a5ec-3b259f8ecfef
-r	java:S106C"+Replace this use of System.out by a logger.(Çƒ¸”üÿÿÿÿ8ÿ’İ†å1J$c22c369f-1d06-4bda-b98c-f03a11a612e4
-m	java:S106L"+Replace this use of System.out by a logger.(¿¼ëĞ8€“İ†å1J$c7ee5bd8-9855-4961-83f7-9f62c137f223
-
-java:S1128	"sRemove this unused import 'org.springframework.security.authentication.AuthenticationCredentialsNotFoundException'.(Û´µ8êŒß†å1
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(â»ğùÿÿÿÿ8æ’İ†å1J$ac6a3afa-3fa1-4646-b141-7ae2aac5928a
+ƒ	java:S125$"<This block of commented-out lines of code should be removed.(Úƒûÿÿÿÿ8ö­Ïå1J$a312d7b7-cfc5-4471-819b-e21b0c81b940
+ƒ	java:S125)"<This block of commented-out lines of code should be removed.(­æøæıÿÿÿÿ8ÅÅÏå1J$9382bb38-d533-400b-acda-b803336201f4
+ƒ	java:S125,"<This block of commented-out lines of code should be removed.(½– ïûÿÿÿÿ8½ãÏå1J$af7f7ecb-8026-466c-a52a-6f7e502820b6
+~	java:S1250"<This block of commented-out lines of code should be removed.(‰õÔˆ8çŒß†å1J$cc0f5eec-f501-4d6a-8cb8-cba575c43662
+ƒ	java:S1257"<This block of commented-out lines of code should be removed.(®½ùşÿÿÿÿ8ÎŒĞå1J$7e200900-1107-4cc5-ab21-9c8ddaece087
+~	java:S125>"<This block of commented-out lines of code should be removed.(ì¼ÜÉ8ÏŒĞå1J$5ffbacef-19da-465d-a203-0b847c9fcdc5
+ƒ	java:S125C"<This block of commented-out lines of code should be removed.(ç˜ŠÜşÿÿÿÿ8­Ñå1J$2f8d48e8-599a-4ec9-93f6-e652a04e979c
+ƒ	java:S125L"<This block of commented-out lines of code should be removed.(ß¼°‰ıÿÿÿÿ8º·Ğå1J$d578fade-ec40-4011-84b8-484dacc45bb5
+¶
+java:S1128	"sRemove this unused import 'org.springframework.security.authentication.AuthenticationCredentialsNotFoundException'.(Û´µ8êŒß†å1J$593f0103-7049-444a-a085-c79709fb161f
 —
-java:S1128"ORemove this unused import 'org.hibernate.sql.ast.SqlTreeCreationLogger.LOGGER'.(šÛ´æúÿÿÿÿ8í¥Ş†å1J$e0b32ea5-0423-4841-a7ec-227c9fd94508
+java:S1128"ORemove this unused import 'org.hibernate.sql.ast.SqlTreeCreationLogger.LOGGER'.(šÛ´æúÿÿÿÿ8í¥Ş†å1J$62427906-8bd9-432e-9841-d252b458b681

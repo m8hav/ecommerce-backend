@@ -1,3 +1,6 @@
 
-r	java:S1068"+Replace this use of System.out by a logger.(Ó›¬œøÿÿÿÿ8Æšôä1J$fca5f1c2-8c6c-415f-93d3-0964ed63a1b8
-r	java:S106Y"+Replace this use of System.out by a logger.(Ó›¬œøÿÿÿÿ8Êšôä1J$a8c48d2e-1548-46ea-9997-a84289835d3c
+ƒ	java:S125;"<This block of commented-out lines of code should be removed.(Ûü©¯úÿÿÿÿ8ƒë™¬å1J$547885ae-fe47-43d5-bef4-4a1a27dcfe96
+†
+java:S1128">Remove this unused import 'jakarta.persistence.EntityManager'.(·ïŸéúÿÿÿÿ8öœ€¬å1J$19571a6e-b9c4-4c04-8518-0d7d6a9ff3d4
+‹
+java:S1128"CRemove this unused import 'jakarta.persistence.PersistenceContext'.(ªê—·ûÿÿÿÿ8öœ€¬å1J$0eda9384-b033-470a-b444-3ba5247d9ce2

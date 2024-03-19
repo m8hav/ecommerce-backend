@@ -49,9 +49,9 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     public SigninResponseDTO logIn(UserDTO userDTO){
-        System.out.println("Reached logIn in auth service impl");
-
-        System.out.println(userDTO.getEmail() + ", " + userDTO.getPassword());
+//        System.out.println("Reached logIn in auth service impl");
+//
+//        System.out.println(userDTO.getEmail() + ", " + userDTO.getPassword());
 
 //        try {
             authenticationManager.authenticate(
@@ -62,16 +62,16 @@ public class AuthServiceImpl implements AuthService {
 //            System.out.println("Authentication failed: " + e.getMessage());
 //        }
 
-        System.out.println("Reached logIn in auth service impl after authentication");
+//        System.out.println("Reached logIn in auth service impl after authentication");
 
 //        UserDTO userDTO = userService.getUserByEmail(userDTO.getEmail()).orElseThrow(() -> new IllegalArgumentException("Invalid email or password"));
 //        User user = userService.getUserEntity();
 //        System.out.println(user.getEmail());
         UserDTO user = userService.getUserByEmail(userDTO.getEmail()).orElseThrow(() -> new IllegalArgumentException("Invalid email or password"));
-        System.out.println("Reached logIn in auth service impl after user retrieval");
+//        System.out.println("Reached logIn in auth service impl after user retrieval");
         var jwt = jwtService.generateToken(UserMapper.INSTANCE.toUser(user));
 
-        System.out.println("Reached logIn in auth service impl after jwt generation");
+//        System.out.println("Reached logIn in auth service impl after jwt generation");
 
         return new SigninResponseDTO(jwt, user.getRole());
     }

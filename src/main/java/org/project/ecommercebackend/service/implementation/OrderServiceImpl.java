@@ -1,5 +1,8 @@
 package org.project.ecommercebackend.service.implementation;
 
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+import jakarta.transaction.Transactional;
 import org.project.ecommercebackend.dto.model.OrderDTO;
 import org.project.ecommercebackend.dto.model.OrderProductDTO;
 import org.project.ecommercebackend.mapper.OrderMapper;
@@ -33,38 +36,7 @@ public class OrderServiceImpl implements OrderService {
         this.userService = userService;
     }
 
-    @Override
-    public Optional<OrderDTO> createOrder(Long userId, String address, String paymentMethod) {
-        Set<CartProduct> cartProducts = cartService.getCartEntity(userId).getCartProducts();
-        if (cartProducts.isEmpty()) {
-            throw new IllegalArgumentException("Cart is empty");
-        }
-        Order order = new Order(null, userId, 0.0, address, paymentMethod, null, new ArrayList<>());
-        order = orderRepository.save(order);
-        Double total = 0.0;
-        for (CartProduct cartProduct : cartProducts) {
-            OrderProduct orderProduct = orderProductService.getOrderProductEntity(cartProduct.getId());
-            if (orderProduct == null) {
-                Optional<OrderProductDTO> orderProductDTO = orderProductService.createOrderProduct(cartProduct, order);
-                if (orderProductDTO.isEmpty()) {
-                    continue;
-                }
-                orderProduct = OrderProductMapper.INSTANCE.toOrderProduct(orderProductDTO.get());
-            }
-            order.getOrderProducts().add(orderProduct);
-            total += orderProduct.getPrice() * orderProduct.getQuantity();
-            System.out.println(total);
-        }
-        order.setTotal(total);
-        order = orderRepository.save(order);
-        cartService.clearCart(userId);
-        return Optional.of(
-                orderDTOWithOrderProductDTOs(
-                        OrderMapper.INSTANCE.toOrderDTO(order)
-                )
-        );
-    }
-
+    @Transactional
     @Override
     public Optional<OrderDTO> createOrder(String address, String paymentMethod) {
         Cart cart = cartService.getCartEntity();
@@ -73,24 +45,18 @@ public class OrderServiceImpl implements OrderService {
             throw new IllegalArgumentException("Cart is empty");
         }
         Order order = new Order(null, cart.getUserId(), 0.0, address, paymentMethod, null, new ArrayList<>());
-        order = orderRepository.save(order);
         Double total = 0.0;
         for (CartProduct cartProduct : cartProducts) {
-            OrderProduct orderProduct = orderProductService.getOrderProductEntity(cartProduct.getId());
+            OrderProduct orderProduct = orderProductService.createOrderProduct(cartProduct, order);
             if (orderProduct == null) {
-                Optional<OrderProductDTO> orderProductDTO = orderProductService.createOrderProduct(cartProduct, order);
-                if (orderProductDTO.isEmpty()) {
-                    continue;
-                }
-                orderProduct = OrderProductMapper.INSTANCE.toOrderProduct(orderProductDTO.get());
+                continue;
             }
             order.getOrderProducts().add(orderProduct);
             total += orderProduct.getPrice() * orderProduct.getQuantity();
-            System.out.println(total);
         }
         order.setTotal(total);
         order = orderRepository.save(order);
-        cartService.clearCart();
+//        cartService.clearCart();
         return Optional.of(
                 orderDTOWithOrderProductDTOs(
                         OrderMapper.INSTANCE.toOrderDTO(order)
@@ -105,20 +71,6 @@ public class OrderServiceImpl implements OrderService {
                 );
         orderDTO.setOrderProducts(orderProductDTOs);
         return orderDTO;
-    }
-
-    @Override
-    public List<OrderDTO> getOrdersByUserId(Long userId) {
-        List<Order> orders = orderRepository.findByUserId(userId);
-        List<OrderDTO> orderDTOs = new ArrayList<>();
-        for (Order order : orders) {
-            orderDTOs.add(
-                    orderDTOWithOrderProductDTOs(
-                            OrderMapper.INSTANCE.toOrderDTO(order)
-                    )
-            );
-        }
-        return orderDTOs;
     }
 
     @Override

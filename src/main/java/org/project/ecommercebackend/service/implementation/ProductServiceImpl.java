@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -57,15 +58,21 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    public Set<ProductDTO> getProductsBySearch(String searchString) {
+        searchString = searchString.replace("+", " ");
+        Set<Product> products = productRepository.findByNameContainingIgnoreCase(searchString);
+        products.addAll(productRepository.findByDescriptionContainingIgnoreCase(searchString));
+        return ProductMapper.INSTANCE.toProductDTOSet(products);
+    }
+
+    @Override
     public Optional<ProductDTO> updateProduct(Product product) {
         Product updatedProduct = productRepository.save(product);
-        System.out.println("product saved to db with " + updatedProduct.getStock());
         return Optional.of(ProductMapper.INSTANCE.toProductDTO(updatedProduct));
     }
 
     @Override
     public Optional<ProductDTO> updateProduct(ProductDTO productDTO) {
-        System.out.println("productDTO received " + productDTO.getName() + ", " + productDTO.getStock());
         Product existingProduct = productRepository.findById(productDTO.getId()).orElse(null);
         if(existingProduct == null) {
             throw new IllegalArgumentException("Product with this id does not exist");

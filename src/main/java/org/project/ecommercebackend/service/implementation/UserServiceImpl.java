@@ -95,9 +95,6 @@ public class UserServiceImpl implements UserService {
         if (userDTO.getPassword() != null) {
             return Optional.of(safeUser(updateUserPassword(userDTO.getPassword()).orElse(null)));
         }
-//        if (isUserInvalid(userDTO)) {
-//            throw new IllegalArgumentException("All user fields (except password) must be provided");
-//        }
         UserDTO existingUserDTO = getUserByEmail(getAuthenticatedUserEmail()).orElse(null);
         existingUserDTO.update(userDTO);
         User updatedUser = userRepository.save(UserMapper.INSTANCE.toUser(existingUserDTO));
@@ -126,8 +123,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean deleteUser() {
-        System.out.println("Reached deleteUser in user service impl");
-        System.out.println(getAuthenticatedUserEmail());
         return deleteUser(getUserByEmail(getAuthenticatedUserEmail()).orElse(null).getId());
     }
 
