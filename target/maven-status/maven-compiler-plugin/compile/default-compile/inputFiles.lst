@@ -1,7 +1,6 @@
 /Users/madhavgoyal/Documents/Projects/ecommerce-demo/ecommerce-backend/src/main/java/org/project/ecommercebackend/controller/CartController.java
 /Users/madhavgoyal/Documents/Projects/ecommerce-demo/ecommerce-backend/src/main/java/org/project/ecommercebackend/model/User.java
 /Users/madhavgoyal/Documents/Projects/ecommerce-demo/ecommerce-backend/src/main/java/org/project/ecommercebackend/service/service/AuthService.java
-/Users/madhavgoyal/Documents/Projects/ecommerce-demo/ecommerce-backend/src/main/java/org/project/ecommercebackend/config/WebConfig.java
 /Users/madhavgoyal/Documents/Projects/ecommerce-demo/ecommerce-backend/src/main/java/org/project/ecommercebackend/dto/model/ProductDTO.java
 /Users/madhavgoyal/Documents/Projects/ecommerce-demo/ecommerce-backend/src/main/java/org/project/ecommercebackend/service/implementation/CartServiceImpl.java
 /Users/madhavgoyal/Documents/Projects/ecommerce-demo/ecommerce-backend/src/main/java/org/project/ecommercebackend/repository/UserRepository.java

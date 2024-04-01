@@ -1,2 +1,2 @@
 org/project/ecommercebackend/EcommerceBackendApplicationTests.class
-org/project/ecommercebackend/service/CartServiceImplTest.class
+org/project/ecommercebackend/service/implementation/ProductServiceImplTest.class

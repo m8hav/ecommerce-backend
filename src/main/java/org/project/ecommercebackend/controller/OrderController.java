@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/v1")
 public class OrderController {
@@ -21,7 +21,7 @@ public class OrderController {
 
     @PostMapping("/order")
     public OrderDTO createOrder(@RequestBody OrderRequestDTO orderRequestDTO) {
-        if (orderRequestDTO == null || orderRequestDTO.getAddress() == null || orderRequestDTO.getPaymentMethod() == null) {
+        if (orderRequestDTO == null || orderRequestDTO.getAddress() == null || orderRequestDTO.getAddress().isEmpty() || orderRequestDTO.getPaymentMethod() == null) {
             throw new IllegalArgumentException("Address and payment method are required");
         }
         return orderService.

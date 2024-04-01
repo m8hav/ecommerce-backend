@@ -347,9 +347,15 @@ public class CartServiceImpl implements CartService {
         Double total = 0.0;
         for (CartProduct cartProduct : cartProducts) {
             ProductDTO productDTO = productService.getProduct(cartProduct.getProductId()).orElse(null);
-            if (productDTO == null) {
+            if (productDTO == null || productDTO.getStock() == 0) {
+                System.out.println("removing product " + cartProduct.getName() + " from cart because it is out of stock");
                 cartProducts.remove(cartProduct);
+                refreshCart();
+                return;
             } else {
+                if (productDTO.getStock() < cartProduct.getQuantity()) {
+                    cartProduct.setQuantity(productDTO.getStock());
+                }
                 cartProduct.setPrice(productDTO.getPrice());
                 total += productDTO.getPrice() * cartProduct.getQuantity();
             }
@@ -372,8 +378,11 @@ public class CartServiceImpl implements CartService {
         Double total = 0.0;
         for (CartProduct cartProduct : cartProducts) {
             ProductDTO productDTO = productService.getProduct(cartProduct.getProductId()).orElse(null);
-            if (productDTO == null) {
+            if (productDTO == null || productDTO.getStock() == 0) {
+                System.out.println("removing product " + cartProduct.getName() + " from cart because it is out of stock");
                 cartProducts.remove(cartProduct);
+                refreshCart();
+                return;
             } else {
                 cartProduct.setPrice(productDTO.getPrice());
                 total += productDTO.getPrice() * cartProduct.getQuantity();

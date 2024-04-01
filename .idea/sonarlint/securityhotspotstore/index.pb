@@ -83,8 +83,6 @@ y
 Isrc/main/java/org/project/ecommercebackend/mapper/OrderProductMapper.java,1/2/1202e8016808302810b4c223445ad0db5b993471
 |
 Lsrc/main/java/org/project/ecommercebackend/service/service/OrderService.java,c/e/cecad33d8328ecf33b46175978c284b8e5012348
-p
-@src/main/java/org/project/ecommercebackend/config/WebConfig.java,9/7/97f6254f36c918adbbdc079ea30ea414daff43d1
 q
 Asrc/main/java/org/project/ecommercebackend/constant/UserRole.java,9/c/9c0f1a1646046da7b88c2dc7230e6df368e2ec98
 y
@@ -124,8 +122,6 @@ Q.idea/sonarlint/securityhotspotstore/e/d/edf6a5801997bd5f4ce0faed16f25ae488f3fa
 Å
 Q.idea/sonarlint/securityhotspotstore/d/5/d57947ba1c014200dd74382a865a1f3bde8a7876,8/b/8b2e6c285b27603095a2fef1974a301008a5f6d1
 Å
-Q.idea/sonarlint/securityhotspotstore/9/7/97f6254f36c918adbbdc079ea30ea414daff43d1,f/3/f31e080444cea169d0ff681034640c2e8c2b7b10
-Å
 Q.idea/sonarlint/securityhotspotstore/5/e/5e7c2842b818be23e73532420a297240af3556d8,3/0/3074ccaa26b597b0b48d6f9689bb15a080503f07
 Å
 Q.idea/sonarlint/securityhotspotstore/5/4/5468497b8101d009f22d84f723ef62805c6c6223,3/3/33ee085e7eb593bf5242f0e270348d78fb261856
@@ -143,10 +139,6 @@ Q.idea/sonarlint/securityhotspotstore/9/c/9c0f1a1646046da7b88c2dc7230e6df368e2ec
 Lsrc/main/java/org/project/ecommercebackend/repository/ProductRepository.java,6/7/67602b7e5ec3ec831d3cd93893ed32c1254954d9
 t
 Dsrc/main/java/org/project/ecommercebackend/mapper/ProductMapper.java,1/a/1a83a7b1244ab8336ea2c3698a7b3eb3a74ff6cd
-Å
-Q.idea/sonarlint/securityhotspotstore/5/5/55781547c0824f25259859fe2bcfa63feb8b67d2,d/8/d8bc227956c1e86e151c1e321216b470d613ce41
-Å
-Q.idea/sonarlint/securityhotspotstore/6/a/6a70b468a180c1fecacf482f57a9c5ccff19c5cb,b/6/b6303c6c545425ecce05c8776685eac6d2c4f599
 w
 G.idea/sonarlint/issuestore/1/a/1a83a7b1244ab8336ea2c3698a7b3eb3a74ff6cd,e/8/e89c36f1e5d991c0a12d4a2637aa3b0294685008
 Å

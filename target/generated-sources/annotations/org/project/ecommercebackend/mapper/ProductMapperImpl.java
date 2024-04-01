@@ -10,7 +10,7 @@ import org.project.ecommercebackend.model.Product;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-03-19T13:55:25+0530",
+    date = "2024-03-29T11:18:29+0530",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 17.0.10 (Oracle Corporation)"
 )
 public class ProductMapperImpl implements ProductMapper {
